@@ -1,0 +1,27 @@
+name: Excavator
+
+# Reads the checkver and autoupdate blocks in each manifest, finds the newest
+# release upstream, rewrites the version and URL, downloads the file and commits
+# the hash it computed. Daily is generous for a bucket this size: releases are
+# rare, and nothing here breaks by being a few hours behind.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  excavate:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: '1'
