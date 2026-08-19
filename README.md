@@ -1,20 +1,20 @@
-# goodmagma bucket
+# Hostpad bucket
 
-A [Scoop](https://scoop.sh) bucket for software published by goodmagma.
+A [Scoop](https://scoop.sh) bucket for [Hostpad](https://github.com/Hostpad/Hostpad).
 
 ```powershell
-scoop bucket add goodmagma https://github.com/goodmagma/scoop-bucket
+scoop bucket add hostpad https://github.com/Hostpad/scoop-bucket
 ```
 
 ```powershell
-scoop install goodmagma/hostpad
+scoop install hostpad/hostpad
 ```
 
 ## What is in it
 
 | Package | What it is |
 | --- | --- |
-| [hostpad](https://github.com/goodmagma/Hostpad) | A connection manager for Windows: every remote machine in one place, opened with a double click through PuTTY, WinSCP, mstsc or your VNC viewer. |
+| [hostpad](https://github.com/Hostpad/Hostpad) | A connection manager for Windows: every remote machine in one place, opened with a double click through PuTTY, WinSCP, mstsc or your VNC viewer. |
 
 ## About the packages
 
